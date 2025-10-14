@@ -1,0 +1,31 @@
+
+.highlight{
+    color: rgb(255, 0, 0);
+   
+}
+.body{
+    height: 100vh;
+}
+.box h1{
+       font-size: 2rem;
+      margin-bottom: 20px;
+      font-family: monospace;
+      text-align: center;
+      
+        
+    }
+    .box p{
+        font-size: 20px; 
+        color: black;
+        font-family: sans-serif;
+    }
+     .box {
+        margin-inline-start: auto;
+      background: #b1b6bd7c;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      width: 150px;
+      height: 160px;
+      font-family: 'Times New Roman', Times, serif;
+     }

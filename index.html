@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index page</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #8e44ad 0%, #3498db 100%); 
+            min-height: 100vh; 
+            color: #333; 
+            padding: 20px; 
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        .header { 
+            text-align: center; 
+            color: white; 
+            margin-bottom: 2rem; 
+            padding: 1.5rem; 
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        .header h1 { 
+            font-size: 2.5rem; 
+            margin-bottom: 0.5rem; 
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .section { 
+            background: white; 
+            margin: 1.5rem 0; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .section:hover {
+            transform: translateY(-5px);
+        }
+        .section-title { 
+            background: linear-gradient(to right, #8e44ad, #3498db);
+            padding: 1.2rem; 
+            color: white; 
+            font-weight: bold; 
+            cursor: pointer; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            font-size: 1.1rem;
+        }
+        .section-title::after { 
+            content: "▼"; 
+            font-size: 0.8rem; 
+            transition: transform 0.3s; 
+        }
+        input[type="checkbox"]:checked + .section-title::after { 
+            transform: rotate(180deg); 
+        }
+        .section-content { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 1rem; 
+            padding: 1.5rem; 
+            background: #f8f9fa;
+        }
+        #assignments-content, #css-assignments-content, #html-topics-content, #css-topics-content { 
+            display: none; 
+        }
+        #assignments-toggle:checked ~ #assignments-content, 
+        #css-assignments-toggle:checked ~ #css-assignments-content,
+        #html-topics-toggle:checked ~ #html-topics-content,
+        #css-topics-toggle:checked ~ #css-topics-content { 
+            display: grid; 
+        }
+        input[type="checkbox"] { 
+            display: none; 
+        }
+        .nav-card { 
+            background: white; 
+            padding: 1.2rem; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            color: #333; 
+            text-align: center; 
+            transition: all 0.3s ease; 
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            border-left: 4px solid #8e44ad;
+            font-weight: 500;
+        }
+        .nav-card:hover { 
+            background: #8e44ad; 
+            color: white; 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 20px rgba(142, 68, 173, 0.3); 
+        }
+        .footer { 
+            text-align: center; 
+            color: white; 
+            margin-top: 2rem; 
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Front End Exercise</h1>
+            <p>Click sections to explore content</p>
+        </header>
+
+       
+ <!-- HTML Assignments Section -->
+        <div class="section">
+            <input type="checkbox" id="html-topics-toggle">
+            <label for="html-topics-toggle" class="section-title">🌐 HTML Topics</label>
+            <div class="section-content" id="html-topics-content">
+                <a href="HTML/Intro/index.html" class="nav-card">HTML Introduction</a>
+                <a href="HTML/block&inline/block&inline.html" class="nav-card">Block&Inline Elements</a>
+                <a href="HTML/block&inline/colour.html" class="nav-card">Colour</a>
+                <a href="HTML/arributes/attri.html" class="nav-card">Arributes</a>
+                <a href="HTML/Form/Dreamprocess.html" class="nav-card">HTML Forms</a>
+                <a href="HTML/Table/table.html" class="nav-card">HTML Tables</a>
+                <a href="HTML/semantic&non/sem&non.html" class="nav-card">Semantic HTML</a>
+                <a href="HTML/Meta-SEO/meta.html" class="nav-card">Media Elements</a>
+            </div>
+        </div>
+        <!-- CSS Assignments Section -->
+        <div class="section">
+            <input type="checkbox" id="css-assignments-toggle">
+            <label for="css-assignments-toggle" class="section-title">🎨 CSS Assignments</label>
+            <div class="section-content" id="css-assignments-content">
+                <a href="CSS/Boxmodel/Start/boxmodel.html" class="nav-card">Box</a>
+                <a href="CSS/cards/cards.html" class="nav-card">Cards</a>
+                <a href="CSS/grid/dashboard/index.html" class="nav-card">Dashboard</a>
+                <a href="CSS/grid/banner/index.html" class="nav-card">Banner</a>
+                <a href="CSS/background/uints-back.html" class="nav-card">Background</a>
+            </div>
+        </div>
+
+       
+
+        </div>
+
+        <footer class="footer">
+            <p>© 2025 FRONTEND</p>
+        </footer>
+    </div>
+</body>
+</html>

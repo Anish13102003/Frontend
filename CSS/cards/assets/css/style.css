@@ -1,0 +1,128 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navbar {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: sticky;
+}
+
+.nav2 {
+    font-size: medium;
+}
+
+.nav3 img {
+    width: 150px;
+}
+
+.nav4 {
+    background-color: rgb(245, 245, 245);
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: small;
+}
+
+.nav4 i {
+    padding: 5px;
+}
+
+.nav4 input {
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    width: 100%;
+}
+
+.nav4 input:focus {
+    outline: none;
+}
+
+.nav5 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: small;
+}
+
+.nav6 p {
+    font-size: small;
+}
+
+.nav6 i {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.nav7 p {
+    font-size: small;
+}
+
+.nav7 i {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.nav8 p {
+    font-size: small;
+}
+
+.nav8 i {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.nav9 p {
+    font-size: small;
+}
+
+.nav9 i {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.nav10 p {
+    font-size: small;
+}
+
+.nav10 i {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    padding: 40px;
+}
+
+.child-cards {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: medium;
+    gap: 10px;
+}
