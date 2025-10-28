@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ben 10 Universe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background: #0f0;
+      background: linear-gradient(90deg, #00ff80, #00cc66);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px #00ff80;
+    }
+
+    header h1 {
+      color: #000;
+      text-shadow: 0 0 10px #00ff80;
+      font-size: 1.8rem;
+      font-weight: 800;
+    }
+
+    nav a {
+      color: #000;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 10px #00ff80;
+    }
+
+    .hero {
+      background: radial-gradient(circle, rgba(0,255,128,0.1) 0%, rgba(0,0,0,1) 70%);
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #00ff80;
+      text-shadow: 0 0 15px #00ff80;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #aaa;
+    }
+
+    .aliens-section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .aliens-section h3 {
+      text-align: center;
+      color: #00ff80;
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .aliens-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .alien-card {
+      background: #111;
+      border: 2px solid #00ff80;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,255,128,0.2);
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .alien-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(0,255,128,0.4);
+    }
+
+    .alien-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      background: #222;
+    }
+
+    .alien-card h4 {
+      color: #00ff80;
+      font-size: 1.3rem;
+      margin: 15px 0 5px;
+    }
+
+    .alien-card p {
+      color: #ccc;
+      font-size: 0.9rem;
+      padding: 0 10px 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #00ff80;
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ben 10 Universe</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#aliens">Aliens</a>
+      <a href="#gadgets">Gadgets</a>
+      <a href="#episodes">Episodes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to the Ben 10 Universe</h2>
+    <p>Explore all the powerful aliens of Ben Tennyson’s Omnitrix!</p>
+  </section>
+
+  <section id="aliens" class="aliens-section">
+    <h3>Top 10 Ben 10 Aliens</h3>
+    <div class="aliens-grid">
+      <div class="alien-card">
+        <img src="https://via.placeholder.com/250x200" alt="Heatblast">
+        <h4>Heatblast</h4>
+        <p>Controls fire and heat, can shoot fireballs and absorb flames.</p>
+      </div>
+      <div class="alien-card">
+        <img src="https://via.placeholder.com/250x200" alt="Four Arms">
+        <h4>Four Arms</h4>
+        <p>Super strength and agility with four massive arms.</p>
+      </div>
+      <div class="alien-card">
+        <img src="https://via.placeholder.com/250x200" alt="XLR8">
+        <h4>XLR8</h4>
+        <p>Incredible speed and reflexes, can run faster than the eye can see.</p>
+      </div>
+      <div class="alien-card">
+        <img src="https://via.placeholder.com/250x200" alt="Diamondhead">
+        <h4>Diamondhead</h4>
+        <p>Body made of durable crystal, can form weapons and projectiles.</p>
+      </div>
+      <div class="alien-card">
+        <img src="https://via.placeholder.com/250x200" alt="Upgrade">
+        <h4>Upgrade</h4>
+        <p>Can merge with and upgrade technology to more powerful forms.</p>
+      </div>
+      <div class="alien-card">
+        <img src="https://via.placeholder.com/250x200" alt="Wildvine">
+        <h4>Wildvine</h4>
+        <p>Plant-based alien that can stretch, regenerate, and release seeds.</p>
+      </div>
+      <div class="alien-card">
+        <img src="https://via.placeholder.com/250x200" alt="Ghostfreak">
+        <h4>Ghostfreak</h4>
+        <p>Can phase through walls, become invisible, and possess others.</p>
+      </div>
+      <div class="alien-card">
+        <img src="https://via.placeholder.com/250x200" alt="Cannonbolt">
+        <h4>Cannonbolt</h4>
+        <p>Rolls into a ball for high-speed attacks and defense.</p>
+      </div>
+      <div class="alien-card">
+        <img src="https://via.placeholder.com/250x200" alt="Grey Matter">
+        <h4>Grey Matter</h4>
+        <p>Highly intelligent and able to manipulate complex technology.</p>
+      </div>
+      <div class="alien-card">
+        <img src="https://via.placeholder.com/250x200" alt="Ripjaws">
+        <h4>Ripjaws</h4>
+        <p>Aquatic alien with enhanced swimming and biting strength.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Ben 10 Universe Fan Page | Designed by Anish M
+  </footer>
+</body>
+</html>
