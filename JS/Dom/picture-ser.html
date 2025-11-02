@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Search</title>
+    <style>
+        body {
+            display: flex;
+            background-image: url(https://proteusfacades.com/wp-content/uploads/2024/05/Lords-1.jpg);
+            background-position: center;
+            background-size: cover;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h2 {
+            color: #222;
+            font-size: 40px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        input {
+            padding: 10px 15px;
+            font-size: 16px;
+            border: 2px solid #26810d;
+            border-radius: 6px;
+            outline: none;
+            width: 220px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color:rgb(0, 162, 255);
+            box-shadow:whitesmoke
+        }
+
+        button {
+            margin-left: 10px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            background: black;
+            color: darkcyan;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: red;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 10px;
+            color:whitesmoke
+        }
+
+        img {
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Picture Of Batsman</h2>
+    <input type="text" id="go through" placeholder="Enter name (eg:batsman)">
+    <button id="srhBtn">Generate</button>
+    <p id="out test"></p>
+    <img src="" id="out decision" alt="" width="300">
+    <script>
+        const btn = document.getElementById("srhBtn");
+        btn.addEventListener('click', () => {
+            const batting = document.getElementById("go through").value.toLowerCase();
+            const player_image = document.getElementById("out decision");
+            const out = document.getElementById("out test");
+            out.textContent = `Your Search Result: ${batting}`;
+            if (batting === "dhoni") {
+                player_image.src = "https://cdn.britannica.com/25/222725-050-170F622A/Indian-cricketer-Mahendra-Singh-Dhoni-2011.jpg";
+            } else if (batting === "rohit") {
+                player_image.src = "https://thefederal.com/h-upload/2024/05/31/450560-rohit-sharma-t20-wc.webp";
+            } else if (batting === "sachin") {
+                player_image.src = "https://sm.mashable.com/t/mashable_in/photo/default/img-3224_ngeq.1248.jpg";
+            } else if (batting === "dhawan") {
+                player_image.src = "https://www.hindustantimes.com/static-content/1y/cricket-logos/players/shikhar-dhawan.png";
+            } else if (batting === "faf") {
+                player_image.src = "https://s.ndtvimg.com/images/content/2014/sep/806/faf-du-plessis-ton.jpg";
+            } else if (batting === "gayle") {
+                player_image.src = "https://cdn.shopify.com/s/files/1/0278/4565/6649/files/WhatsApp_Image_2024-01-25_at_07.52.01.webp?v=1706149911";
+            } else if (batting === "miller") {
+                player_image.src = "https://p.imgci.com/db/PICTURES/CMS/388000/388018.5.png";
+            } else if (batting === "pooran") {
+                player_image.src = "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/347700/347743.4.jpg";
+            } else if (batting === "warner") {
+                player_image.src = "https://i.pinimg.com/736x/d7/0c/18/d70c1806858155511eb2cb255883a60c.jpg";
+            } else if (batting === "brendon") {
+                player_image.src = "https://e0.365dm.com/20/05/768x432/skysports-brendon-mccullum_4986141.jpg?20200508133842";
+            } else if (batting === "steyn") {
+                player_image.src = "https://sportzcraazy.com/wp-content/uploads/2019/09/dale-steyn-photo-1024x683.jpg";
+            } else {
+                out.textContent = `Your Search Data: ${batting} is not found`;
+                palyer_image.src = "";
+            }
+        });
+    </script>
+</body>
+
+</html>
