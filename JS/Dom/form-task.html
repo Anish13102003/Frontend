@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Destructuring</h1>
+    <p id="there"></p>
+
+    <form id="form">
+      <label>Enter The Name</label>
+      <input type="text" id="username" placeholder="capitalize" />
+      <label>Enter The Email</label>
+      <input type="email" id="useremail" placeholder="ex@gmail.com" />
+      <label>Age</label>
+      <input type="number" id="age" />
+      <label>Password</label>
+      <input type="text" id="pass" />
+      <label>Ph number</label>
+      <input type="number" id="phone" />
+      <button id="btn">Register</button>
+    </form>
+    <script>
+    const form = document.getElementById("form")
+    const there =document.getElementById("there")
+   // const anish = document.getElementById("username")
+    //const email = document.getElementById("useremail")
+   // const age =document.getElementById("age")
+   // const secret =document.getElementById("pass")
+   // const phone =document.getElementById("phone")
+   // const button=document.getElementById("btn")
+   // const para =document.getElementById("there")
+    
+   form.addEventListener("submit",(e)=>{
+    e.preventDefault()
+     const username = document.getElementById("username").value
+     const email = document.getElementById("email").value
+    if(!username ||!email){
+      there.innerText="there is nothing"
+      there.style.color="green"
+return
+
+    }
+        alert(the)
+        form.reset()
+    })
+
+
+    </script>
+  </body>
+</html>
