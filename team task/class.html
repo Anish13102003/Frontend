@@ -46,7 +46,7 @@
             box-sizing: border-box;
             margin-left: 10px;
             margin-right: 10px;
-            font-weight: 200;
+            font-weight: 100;
             
         }
     .navbar {
@@ -80,6 +80,26 @@
     .nav a:hover {
       color: black; /* Hover color */
     }
+    #form{
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      margin-top: 30px;
+     
+    }
+    .quoteform{
+      justify-content: center;
+
+      
+    }
+    #foot{
+      text-align: center;
+      padding: 30px;
+      color: blueviolet;
+      background-color: white;
+
+    }
+   
   </style>
 </head>
 
@@ -145,18 +165,20 @@
         </div>
     </div>
     <center>
-    <div id="form" style="display: flex;">
+    <div id="form" >
         <form id="quoteForm" action="d.html" >
-        <label>Enter Name</label>
+        <label>Enter The Name:</label>
         <input type="text" name="name" required /><br><br>
-        <label>(Quote):</label>
+        <label>Quote For Book:</label>
         <textarea name="quote" required></textarea><br><br>
-        <label> (Book Name):</label>
+        <label>Enter Book Name:</label>
         <input type="text" name="book" required /><br><br>
-        <button type="submit"> (Submit)</button>
+        <button type="submit"> Search</button>
     </form>
     </div>
-    <footer>Copyrights@1800 Reserved</footer>
+    <div id="foot">
+    <footer >Copyrights@1800 Reserved</footer>
+      </div>
     </center>
 </body>
 
