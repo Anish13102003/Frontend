@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reports</title>
+</head>
+
+<body>
+    <center>
+        <h2>Street Light Maintenance Report Form</h2>
+
+        <form id="lightForm">
+
+            <label>Your Name:</label><br>
+            <input type="text" id="name" required><br><br>
+
+            <label>Contact Number:</label><br>
+            <input type="text" id="contact" required><br><br>
+
+            <label>Date of Report:</label><br>
+            <input type="date" id="date" required><br><br>
+
+            <label>Street Location:</label><br>
+            <input type="text" id="street" required><br><br>
+
+            <label>Issue Description:</label><br>
+            <textarea id="issue" required></textarea><br><br>
+
+            <button type="submit">Save Report</button>
+        </form>
+
+        <h2>Saved Maintenance Reports</h2>
+        <table border="1" id="reportTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Contact</th>
+                    <th>Date</th>
+                    <th>Street</th>
+                    <th>Issue</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <script>
+            let reports = JSON.parse(localStorage.getItem("lightReports")) || [];
+
+            function renderTable() {
+                const tableBody = document.querySelector("#reportTable tbody");
+                tableBody.innerHTML = "";
+
+                reports.forEach((report) => {
+                    const row = `
+                    <tr>
+                        <td>${report.name}</td>
+                        <td>${report.contact}</td>
+                        <td>${report.date}</td>
+                        <td>${report.street}</td>
+                        <td>${report.issue}</td>
+                    </tr>`;
+                    tableBody.innerHTML += row;
+                });
+            }
+
+            document.getElementById("lightForm").addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const data = {
+                    name: document.getElementById("name").value,
+                    contact: document.getElementById("contact").value,
+                    date: document.getElementById("date").value,
+                    street: document.getElementById("street").value,
+                    issue: document.getElementById("issue").value
+                };
+
+                reports.push(data);
+                localStorage.setItem("lightReports", JSON.stringify(reports));
+
+                renderTable();
+                this.reset();
+            });
+
+            renderTable();
+        </script>
+    </center>
+</body>
+
+</html>

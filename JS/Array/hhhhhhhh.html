@@ -45,6 +45,9 @@
       let high=50
       let value= high==40 ? "crt" :"wrg";
       console.log(value)
+      let definition="embedded variable inside the stirng";
+      let ternary=`ter :${definition}`;
+      console.log(ternary)
 
        // const makeFood = () => {
         //     return new Promise((resolve, reject) => {
@@ -74,7 +77,41 @@
 
         //     console.log("Error", error);
         // })
+     // let lak= "ani";
+     // let ani=(`i like u ${lak}`);
+      //console.log(ani);
 
-    </script>
+      const catering=(cateringboys,cooker)=>{
+        console.log(`how many dishes cook ${cateringboys}`)
+            cooker()
+
+      setTimeout(()=>{
+        console.log("lets arrange the dishes ");
+       },3000)
+      
+    }
+    const dish=()=>{
+      console.log("12 dishes")
+    }
+    catering("",dish)
+
+    let fire =setTimeout(()=>{
+      console.log("hi i am good")
+    },3000);
+
+//promise
+const water=()=> {
+new Promise((resolved,reject)=>{
+  console.log("good boy")
+
+})
+}
+water()
+
+let hurt=`love ${hurt}`;
+console.log(JSON.parse(hurt))
+
+
+  </script>
   </body>
 </html>

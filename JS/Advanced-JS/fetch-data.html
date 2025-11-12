@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    
+<h2>Random Jokes Collection</h2>
+<div id="jokes"></div>
+
+<script>
+    const getJokes = async () => {
+
+        try {
+            console.log('Fetching Jokes');
+
+            const res = await fetch("https://official-joke-api.appspot.com/jokes/ten");
+            console.log(res);
+
+            const data = await res.json();
+            const container = document.getElementById("jokes");
+
+            data.forEach((item, index) => {
+                const jokeBox = document.createElement("div");
+                jokeBox.style.margin = "15px";
+                jokeBox.style.padding = "10px";
+                jokeBox.style.border = "2px solid black";
+                jokeBox.style.borderRadius = "10px";
+                jokeBox.style.background = "#f2f2f2";
+
+                jokeBox.innerHTML = `
+                    <h3>Joke ${index + 1}:</h3>
+                    <p><b>Setup:</b> ${item.setup}</p>
+                    <p><b>Punchline:</b> ${item.punchline}</p>
+                `;
+
+                container.appendChild(jokeBox);
+            });
+
+        } catch (err) {
+            console.error('Something went wrong:', error);
+        } finally {
+            console.log('Jokes Fetch Process Completed');
+        }
+    };
+
+    getJokes();
+</script>
+
+</body>
+</html>

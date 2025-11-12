@@ -6,66 +6,67 @@
     <title>Callback & Promises</title>
 </head>
 <body>
-    <h2>Callback Function and Promises Method</h2>
+    <h2>Website Creation Project</h2>
     
     <script>
 
-        function projectPlan() {
-            return new Promise((resolve,reject) => {
+        function ideaPlanning() {
+            return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    console.log("We Plan to Develop a Future Project");
-                    resolve("Project Manager Accept the Plan");
-                },2000)
-            })
+                    console.log("We started planning a new Website idea.");
+                    resolve("The team approved the Website concept.");
+                }, 2000);
+            });
         }
 
-        function projectDiscuss() {
-            return new Promise((resolve,reject) => {
+        function designPhase() {
+            return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    console.log("New Project Prenstation with our Client");
-                    resolve("Client Accept the Project");
-                },3000)
-            })
-        }
-        
-        function projectDevelop() {
-            return new Promise((resolve,reject) => {
-                setTimeout(() => {
-                    console.log("Our Team Ready to Develop a Project");
-                    resolve("Project Manager Happy to see our Team Dedication to Develop a Project");
-                },4000)
-            })
+                    console.log("UI/UX design completed successfully.");
+                    resolve("Designs reviewed and approved by the team.");
+                }, 3000);
+            });
         }
 
-        function projectDeploy() {
-            return new Promise((resolve,reject) => {
+        function developmentPhase() {
+            return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    console.log("App Project Deployed to our Client");
-                    resolve("Client is Very Happy");
-                },5000)
-            })
+                    console.log("Development team started building the Website.");
+                    resolve("All modules are working perfectly after testing.");
+                }, 4000);
+            });
         }
 
-        projectPlan()
-        .then((week1) => {
-            console.log("Week 1:",week1);
-            return projectDiscuss();
+        function deploymentPhase() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    console.log("Website deployed successfully on the server.");
+                    resolve("Client is impressed with the final result!");
+                }, 5000);
+            });
+        }
+
+        // Promise Chain
+        ideaPlanning()
+        .then((step1) => {
+            console.log("Phase 1:", step1);
+            return designPhase();
         })
-        .then((week2) => {
-            console.log("Week 2:",week2);
-            return projectDevelop();
+        .then((step2) => {
+            console.log("Phase 2:", step2);
+            return developmentPhase();
         })
-        .then((week3) => {
-            console.log("Week 3:",week3);
-            return projectDeploy();
+        .then((step3) => {
+            console.log("Phase 3:", step3);
+            return deploymentPhase();
         })
-        .then((week4) => {
-            console.log("Week 4:",week4);
-            console.log("We are Successfully Delivered a Project");
+        .then((step4) => {
+            console.log("Phase 4:", step4);
+            console.log(" Website Project Completed Successfully!");
         })
-        .catch((projecterror) => {
-            console.log("Client not Satisfied:",projecterror);
-        })
+        .catch((error) => {
+            console.log(" Something went wrong:", error);
+        });
 
     </script>
 </body>
